@@ -9,11 +9,11 @@ ul {
 }
 
 body {
-    background-image: url(https://images4.alphacoders.com/106/106826.jpg);
+    background-image: url(../images/bg.jpg);
     background-position: top center;
     background-size: 100% auto;
     background-repeat: no-repeat;
-    background-color: #061a23;
+    background-color: #121214;
 }
 
 body {
@@ -28,7 +28,7 @@ header {
 header div {
     width: 120px;
     margin: auto;
-    background-image: linear-gradient(90deg, #22ABD4 0%, #0D3445 100%);
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 100%);
     border-radius: 50%;
     padding: 3px;
     display: flex;
@@ -55,13 +55,59 @@ main {
 
 section {
     color: white;
-    background-image: linear-gradient(90deg, #22ABD4 0%, #07132d 100%);
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 100%);
     padding-top: 6px;
     border-radius: 8px;
 }
 
+.button-movies {
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 100%);
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.view-movies {
+    border-radius: 4px;
+    background-color: #2A2634;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    width: 180px;
+    cursor: pointer;
+    margin: 5px;
+    text-decoration:none
+}
+
+.view-movies span {
+    position: relative;
+    transition: 0.5s;
+}
+
+.view-movies span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: -1px;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.view-movies:hover span {
+    padding-right: 25px;
+}
+
+.view-movies:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
 section div {
-    background-color: #061a23;
+    background-color: #2A2634;
     padding: 32px;
     padding-top: 24px;
     border-radius: 8px;
@@ -95,21 +141,26 @@ section ul li:hover {
     transform: scale(1.1)
 }
 
-section ul img {
+.games-list img {
     width: 90px;
     border-radius: 8px;
-    border: 2px solid #07132d
+    border: 2px solid #443E54
+}
+
+.channel-list img {
+    border-radius: 50%;
+    width: 70px;
+    border: 2px solid #443E54
 }
 
 .agradecimento {
     margin: auto;
 }
 .agradecimento span {
-    color: #ffffff
+    color: #A1A1AA
 }
 .agradecimento a {
-    text-decoration:none;
-    color: #ffffff
+    text-decoration:none
 }
 /* Animation */
 
@@ -118,9 +169,14 @@ header div {
     animation: fromTop .7s .2s backwards; 
 }
 
-/*Passando animação, segundos de animação */
+/*Passando animação, segundos de animação e delay*/
 main section {
     animation: fromBottom .7s backwards;
+}
+
+/*Passando animação, segundos de animação e delay*/
+.button-movies {
+    animation: fromRight .7s backwards;
 }
 
 main section:nth-child(1) {
@@ -156,5 +212,17 @@ main section:nth-child(3) {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes fromRight {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }

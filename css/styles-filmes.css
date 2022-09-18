@@ -9,11 +9,10 @@ ul {
 }
 
 body {
-    background-image: url(./assets/bg.jpg);
+    background-image: url(../images/bg2.jpg);
     background-position: top center;
-    background-size: 100% auto;
     background-repeat: no-repeat;
-    background-color: #121214;
+    background-color: #061a23;
 }
 
 body {
@@ -28,7 +27,7 @@ header {
 header div {
     width: 120px;
     margin: auto;
-    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 100%);
+    background-image: linear-gradient(90deg, #22ABD4 0%, #0D3445 100%);
     border-radius: 50%;
     padding: 3px;
     display: flex;
@@ -55,13 +54,59 @@ main {
 
 section {
     color: white;
-    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 100%);
+    background-image: linear-gradient(90deg, #22ABD4 0%, #07132d 100%);
     padding-top: 6px;
     border-radius: 8px;
 }
 
+.button-games {
+    background-image:  linear-gradient(90deg, #22ABD4 0%, #0D3445 100%);
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.view-games {
+    border-radius: 4px;
+    background-color: #061a23;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    width: 180px;
+    cursor: pointer;
+    margin: 5px;
+    text-decoration:none
+}
+
+.view-games span {
+    position: relative;
+    transition: 0.5s;
+}
+
+.view-games span:after {
+    content: "\00ab";
+    position: absolute;
+    opacity: 0;
+    top: -1px;
+    left: -20px;
+    transition: 0.5s;
+}
+
+.view-games:hover span {
+    padding-left: 25px;
+}
+
+.view-games:hover span:after {
+    opacity: 1;
+    left: 0;
+}
+
 section div {
-    background-color: #2A2634;
+    background-color: #061a23;
     padding: 32px;
     padding-top: 24px;
     border-radius: 8px;
@@ -95,26 +140,21 @@ section ul li:hover {
     transform: scale(1.1)
 }
 
-.games-list img {
+section ul img {
     width: 90px;
     border-radius: 8px;
-    border: 2px solid #443E54
-}
-
-.channel-list img {
-    border-radius: 50%;
-    width: 70px;
-    border: 2px solid #443E54
+    border: 2px solid #07132d
 }
 
 .agradecimento {
     margin: auto;
 }
 .agradecimento span {
-    color: #A1A1AA
+    color: #ffffff
 }
 .agradecimento a {
-    text-decoration:none
+    text-decoration:none;
+    color: #061a23
 }
 /* Animation */
 
@@ -126,6 +166,11 @@ header div {
 /*Passando animação, segundos de animação */
 main section {
     animation: fromBottom .7s backwards;
+}
+
+/*Passando animação, segundos de animação */
+.button-games {
+    animation: fromLeft .7s backwards;
 }
 
 main section:nth-child(1) {
@@ -161,5 +206,17 @@ main section:nth-child(3) {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes fromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
