@@ -4,7 +4,7 @@
 
 Projeto construído do evento Next Level Week da Rocketseat 🚀
 
-![preview](./.github/preview.PNG)
+![preview](./.github/previewAtualizado.png)
 
 [> Acesse o projeto clicando aqui!](https://gs7joao.github.io/NLW-eSports/)
 
