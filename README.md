@@ -8,11 +8,6 @@ Projeto construído do evento Next Level Week da Rocketseat 🚀
 
 [> Acesse o projeto clicando aqui!](https://gs7joao.github.io/NLW-eSports/)
 
-## Tecnologias
-
-
-[![My Skills](https://skills.thijs.gg/icons?i=html,css)](https://skills.thijs.gg)
-
 
 ## Contato
 
